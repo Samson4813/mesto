@@ -542,6 +542,7 @@ body {
 		line-height: 29px;
 		margin: 0;
 	}
+}
 
 	@media screen and (max-width: 767px) {
 		.element__item_like {
