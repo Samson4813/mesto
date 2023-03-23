@@ -1,0 +1,11 @@
+.element__item_text {
+	padding: 28px 15px 31px 21px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	width: 246px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	align-items: center;
+	column-gap: 10px;
+}

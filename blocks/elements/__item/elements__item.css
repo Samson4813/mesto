@@ -1,0 +1,14 @@
+.elements__item {
+	max-width: 282px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+	.elements__item {
+		max-width: 282px;
+		display: flex;
+		flex-direction: column;
+	}
+}
