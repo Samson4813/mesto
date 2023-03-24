@@ -1,4 +1,4 @@
-.element__like {
+.elements__like {
 	background-image: url(../../../images/like11.svg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -9,17 +9,17 @@
 	background-color: transparent;
 }
 
-.element__like:hover {
+.elements__like:hover {
 	opacity: 0.5;
 }
 
-.element__like:hover:active {
+.elements__like:hover:active {
 	background-image: url(../../../images/like_active.svg);
 	opacity: 1;
 }
 
 @media screen and (max-width: 1000px) {
-	.element__like {
+	.elements__like {
 		width: 22px;
 		height: 19px;
 		border: 0;
