@@ -4,3 +4,9 @@
     align-items: center;
     column-gap: 18px;
 }
+
+@media screen and (max-width: 1000px) {
+    .profile__subcontent {
+        max-width: 282px;
+    }
+}

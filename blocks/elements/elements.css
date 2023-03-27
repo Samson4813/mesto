@@ -10,11 +10,9 @@
 
 @media screen and (max-width: 1000px) {
 	.elements {
-		margin: 0 auto;
-		max-width: 282px;
-		display: grid;
 		grid-template-columns: repeat(1, minmax(min-content, max-content));
 		grid-template-rows: repeat(6, 361px);
 		gap: 20px 0;
+		justify-content: center;
 	}
 }

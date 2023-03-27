@@ -1,6 +1,5 @@
 .profile__text {
 	color: white;
-	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
@@ -13,9 +12,6 @@
 
 @media screen and (max-width: 1000px) {
 	.profile__text {
-		color: white;
-		font-style: normal;
-		font-weight: 400;
 		font-size: 14px;
 		line-height: 17px;
 		text-align: center;

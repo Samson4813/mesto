@@ -1,16 +1,23 @@
-.popup__text {
-	font-family: 'Inter';
+.popup__entry {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 27px;
 	width: 358px;
+	height: 14px;
 	margin: 0;
 	border: 0;
+	padding: 0;
+	padding-bottom: 13px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popup__entry:last-of-type {
+	padding-top: 29px;
 }
 
 @media screen and (max-width: 1000px) {
-	.popup__text {
+	.popup__entry {
 		max-width: 238px;
 	}
 }
