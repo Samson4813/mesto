@@ -17,6 +17,7 @@
 
 @media screen and (max-width: 1000px) {
 	.profile__edit {
+		background-image: url(../../../images/Edit\ Button_1.png);
 		width: 18px;
 		height: 18px;
 	}

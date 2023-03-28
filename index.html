@@ -6,16 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Места России</title>
 	<link rel="stylesheet" href="./pages/index.css">
-	<script src="./index.js" defer></script>
+	<script src="./scripts/index.js" defer></script>
 </head>
 
 <body class="body">
 	<div class="page">
+		<header class="header">
+			<img class="header__logo" src="./images/logo.svg" alt="логотип место">
+		</header>
 		<main class="content">
-			<header class="header">
-				<img class="header__logo" src="./images/logo.svg" alt="логотип место">
-				<div class="header__line"></div>
-			</header>
 			<section class="profile">
 				<div class="profile__content">
 					<img class="profile__photo" src="./images/image.jpg" alt="кусто">
@@ -78,11 +77,11 @@
 			<p class="footer__copyright">&copy; 2020 Mesto Russia</p>
 		</footer>
 		<section class="popup">
-			<div class="popup__content">
+			<div class="popup__container">
 				<h2 class="popup__intro">Редактировать профиль</h2>
 				<form class="popup__form" name="form">
-					<input class="popup__entry popup__entry_name" name="name">
-					<input class="popup__entry popup__entry_text" name="name">
+					<input class="popup__entry popup__entry_text_name" name="name">
+					<input class="popup__entry popup__entry_text_about" name="text">
 					<button type="submit" class="popup__save">Сохранить</button>
 				</form>
 				<button type="button" class="popup__close"></button>
