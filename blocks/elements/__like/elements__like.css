@@ -14,11 +14,6 @@
 	opacity: 0.5;
 }
 
-.elements__like:hover:active {
-	background-image: url(../../../images/like_active.svg);
-	opacity: 1;
-}
-
 @media screen and (max-width: 1000px) {
 	.elements__like {
 		width: 22px;

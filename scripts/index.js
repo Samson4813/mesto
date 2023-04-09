@@ -68,6 +68,21 @@ const createCard = (cardcontent) => {
   elementsImage.src = cardcontent.link;
   elementsImage.alt = cardcontent.name;
 
+  const deletebutton = card.querySelector('.elements__delete');
+  const likebutton = card.querySelector('.elements__like');
+
+  const handledelete = () => {
+    card.remove();
+  };
+
+  const handlelike = () => {
+    likebutton.classList.toggle('elements__like_active');
+  };
+
+  deletebutton.addEventListener("click", handledelete);
+
+  likebutton.addEventListener("click", handlelike);
+
   return card;
 };
 
