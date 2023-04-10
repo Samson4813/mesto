@@ -13,6 +13,7 @@ const popupCardNameInput = document.querySelector('.popup__entry_text_name');
 const popupCardTextInput = document.querySelector('.popup__entry_text_about');
 const popupCloser = document.querySelector('.popup__closer');
 
+
 const initialCards = [
     {
       name: 'Архыз',
@@ -91,6 +92,7 @@ const createCard = (cardcontent) => {
   const elementName = card.querySelector('.elements__name');
   const elementsImage = card.querySelector('.elements__image');
 
+
   elementName.innerHTML = cardcontent.name;
   elementsImage.src = cardcontent.link;
   elementsImage.alt = cardcontent.name;
@@ -120,3 +122,30 @@ const plusCard = (card) => {
 initialCards.forEach((cards) => {
   plusCard(createCard(cards));
 });
+
+
+
+
+
+const editCardSubmit = (event) => {
+  event.preventDefault();
+
+  const nameInput = popupCardForm.querySelector('.popup__entry_card_name');
+  const textInput = popupCardForm.querySelector('.popup__entry_card_about');
+  
+  const name = nameInput.value;
+  const link = textInput.value;
+
+  const info = {
+    name,
+    link
+  }
+
+  plusCard(createCard(info));
+  popupCardForm.reset();
+}
+
+popupCardForm.addEventListener('submit', editCardSubmit);
+
+
+
