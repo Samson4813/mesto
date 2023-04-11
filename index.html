@@ -35,10 +35,10 @@
 		<footer class="footer">
 			<p class="footer__copyright">&copy; 2020 Mesto Russia</p>
 		</footer>
-		<section class="popup popup__edit">
+		<section class="popup popup_edit_form">
 			<div class="popup__container">
 				<h2 class="popup__intro">Редактировать профиль</h2>
-				<form class="popup__form popup__edit_form" name="form">
+				<form class="popup__form popup__form_edit" name="form">
 					<input class="popup__entry popup__entry_text_name" name="name">
 					<input class="popup__entry popup__entry_text_about" name="text">
 					<button type="submit" class="popup__save">Сохранить</button>
@@ -46,10 +46,10 @@
 				<button type="button" class="popup__close"></button>
 			</div>
 		</section>
-		<section class="popup popup__card">
+		<section class="popup popup_card">
 			<div class="popup__container">
 				<h2 class="popup__intro">Новое место</h2>
-				<form class="popup__form popup__card_form" name="form">
+				<form class="popup__form popup__form_card" name="form">
 					<input class="popup__entry popup__entry_card_name" name="names" placeholder="Название">
 					<input class="popup__entry popup__entry_card_about" name="texts" placeholder="Ссылка на картинку">
 					<button type="submit" class="popup__save">Сохранить</button>
@@ -61,7 +61,7 @@
 			<div class="photoPopup__container">
 				<img class="photoPopup__image" src="./images/kirill-pershin-1088404-unsplash.jpg">
 				<h2 class="photoPopup__text"></h2>
-				<button type="button" class="popup__close popup__closes"></button>
+				<button type="button" class="photoPopup__close"></button>
 			</div>
 		</section>
 	</div>

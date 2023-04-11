@@ -1,7 +1,7 @@
-.popup__close {
+.photoPopup__close {
 	position: absolute;
-	top: -15px;
-	right: -15px;
+	top: -35px;
+	right: -37px;
 	background-image: url(../../../images/Close\ Icon.svg);
 	color: #FFFFFF;
 	background-color: transparent;
@@ -11,13 +11,13 @@
 	cursor: pointer;
 }
 
-.popup__close:hover {
+.photoPopup__close:hover {
 	opacity: 0.6;
 }
 
 
 @media screen and (max-width: 1000px) {
-	.popup__close {
+	.photoPopup__close {
 		background-image: url(../../../images/Close\ Icon1.svg);
 		width: 20px;
 		height: 20px;

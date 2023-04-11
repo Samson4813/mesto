@@ -1,18 +1,18 @@
 const openForm = document.querySelector('.profile__edit');
-const popup = document.querySelector('.popup__edit');
+const popup = document.querySelector('.popup_edit_form');
 const popupClose = document.querySelector('.popup__close');
 const popupNameInput = document.querySelector('.popup__entry_text_name');
 const popupTextInput = document.querySelector('.popup__entry_text_about');
-const popupForm = document.querySelector('.popup__edit_form');
+const popupForm = document.querySelector('.popup_edit_form');
 const profileName = document.querySelector('.profile__name');
 const profileText = document.querySelector('.profile__text');
-const popupCard = document.querySelector('.popup__card');
-const popupCardForm = document.querySelector('.popup__card_form');
+const popupCard = document.querySelector('.popup_card');
+const popupCardForm = document.querySelector('.popup__form_card');
 const openCardForm = document.querySelector('.profile__button');
 const popupCardNameInput = document.querySelector('.popup__entry_text_name');
 const popupCardTextInput = document.querySelector('.popup__entry_text_about');
 const popupCloser = document.querySelector('.popup__closer');
-const popupCloses = document.querySelector('.popup__closes');
+const popupCloses = document.querySelector('.photoPopup__close');
 
 
 const initialCards = [
