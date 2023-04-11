@@ -12,6 +12,7 @@ const openCardForm = document.querySelector('.profile__button');
 const popupCardNameInput = document.querySelector('.popup__entry_text_name');
 const popupCardTextInput = document.querySelector('.popup__entry_text_about');
 const popupCloser = document.querySelector('.popup__closer');
+const popupCloses = document.querySelector('.popup__closes');
 
 
 const initialCards = [
@@ -83,6 +84,9 @@ popupCardForm.addEventListener('submit', function (event) {
 
 const templateCard = document.querySelector('.templateCard');
 const elements = document.querySelector('.elements');
+const photoPopup = document.querySelector('.photoPopup');
+const photoPopupimage =  document.querySelector('.photoPopup__image');
+const photoPopuptext =  document.querySelector('.photoPopup__text');
 
 const createCard = (cardcontent) => {
   const card = templateCard.content
@@ -92,10 +96,21 @@ const createCard = (cardcontent) => {
   const elementName = card.querySelector('.elements__name');
   const elementsImage = card.querySelector('.elements__image');
 
-
   elementName.innerHTML = cardcontent.name;
   elementsImage.src = cardcontent.link;
   elementsImage.alt = cardcontent.name;
+
+  const openPhotoPopup = () => {
+    photoPopupimage.src = cardcontent.link;
+    photoPopuptext.innerHTML = cardcontent.name;
+    openPopup(photoPopup);
+  }
+
+  elementsImage.addEventListener('click', openPhotoPopup);
+
+  popupCloses.addEventListener('click', function () {
+    photoPopup.classList.remove('popup_opened');
+  });
 
   const deletebutton = card.querySelector('.elements__delete');
   const likebutton = card.querySelector('.elements__like');
