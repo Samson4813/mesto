@@ -16,7 +16,7 @@ const popupClosePhoto = document.querySelector('.photoPopup__close');
 const CardNameInput = popupCardForm.querySelector('.popup__entry_card_name');
 const CardTextInput = popupCardForm.querySelector('.popup__entry_card_about');
 const templateCard = document.querySelector('.templateCard');
-const elements = document.querySelector('.elements');
+const classList = document.querySelector('.elements');
 const photoPopup = document.querySelector('.photoPopup');
 const photoPopupimage =  document.querySelector('.photoPopup__image');
 const photoPopuptext =  document.querySelector('.photoPopup__text');
@@ -48,49 +48,13 @@ const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ];
+;
 
-function openPopup(popup) {
-    popup.classList.add('popup_opened');
+const openProfilePopup = () => {
+  popupNameInput.value = profileName.textContent;
+  popupTextInput.value = profileText.textContent;
+  openPopup(popupProfile);
 }
-
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-}
-
-
-const OpenProfilePopup = () => {
-    popupNameInput.value = profileName.textContent;
-    popupTextInput.value = profileText.textContent;
-    openPopup(popupProfile);
-}
-
-openFormProfile.addEventListener('click', OpenProfilePopup);
-
-popupCloseProfile.addEventListener('click', function () {
- closePopup(popupProfile);
-});
-
-popupFormProfile.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    profileName.textContent = popupNameInput.value;
-    profileText.textContent = popupTextInput.value;
-    closePopup(popupProfile);
-});
-
-openCardForm.addEventListener('click', function () {
-  openPopup(popupCard);
-});
-
-popupCloseCard.addEventListener('click', function () {
-  closePopup(popupCard);
-});
-
-popupCardForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  closePopup(popupCard);
-});
-
 
 const createCard = (cardcontent) => {
   const card = templateCard.content
@@ -111,13 +75,9 @@ const createCard = (cardcontent) => {
 
     openPopup(photoPopup);
   }
-
+  
   elementsImage.addEventListener('click', openPhotoPopup);
-
-  popupClosePhoto.addEventListener('click', function () {
-    closePopup(photoPopup);
-  });
-
+  
   const deletebutton = card.querySelector('.elements__delete');
   const likebutton = card.querySelector('.elements__like');
 
@@ -136,12 +96,21 @@ const createCard = (cardcontent) => {
   return card;
 };
 
-const plusCard = (card) => {
-  elements.prepend(card);
+
+const openPhotoPopup = () => {
+  photoPopupimage.src = cardcontent.link;
+  photoPopupimage.alt = cardcontent.name;
+  photoPopuptext.textContent = cardcontent.name;
+
+  openPopup(photoPopup);
+}
+
+const addCard = (card) => {
+  classList.prepend(card);
 };
 
 initialCards.forEach((cards) => {
-  plusCard(createCard(cards));
+  addCard(createCard(cards));
 });
 
 
@@ -156,11 +125,51 @@ const editCardSubmit = (event) => {
     link
   }
 
-  plusCard(createCard(info));
+  addCard(createCard(info));
   popupCardForm.reset();
 }
+
+
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+}
+
+function closePopup(popup) {
+popup.classList.remove('popup_opened');
+}
+
+
+popupFormProfile.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  profileName.textContent = popupNameInput.value;
+  profileText.textContent = popupTextInput.value;
+  closePopup(popupProfile);
+});
+
+openCardForm.addEventListener('click', function () {
+openPopup(popupCard);
+});
+
+popupCloseCard.addEventListener('click', function () {
+closePopup(popupCard);
+});
+
+popupCardForm.addEventListener('submit', function (event) {
+event.preventDefault();
+closePopup(popupCard);
+});
+
+openFormProfile.addEventListener('click', openProfilePopup);
+
+popupCloseProfile.addEventListener('click', function () {
+ closePopup(popupProfile);
+});
+
 
 popupCardForm.addEventListener('submit', editCardSubmit);
 
 
-
+popupClosePhoto.addEventListener('click', function () {
+  closePopup(photoPopup);
+});
