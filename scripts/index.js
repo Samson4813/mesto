@@ -16,7 +16,7 @@ const popupClosePhoto = document.querySelector('.photoPopup__close');
 const CardNameInput = popupCardForm.querySelector('.popup__entry_card_name');
 const CardTextInput = popupCardForm.querySelector('.popup__entry_card_about');
 const templateCard = document.querySelector('.templateCard');
-const classList = document.querySelector('.elements');
+const cardList = document.querySelector('.elements');
 const photoPopup = document.querySelector('.photoPopup');
 const photoPopupimage =  document.querySelector('.photoPopup__image');
 const photoPopuptext =  document.querySelector('.photoPopup__text');
@@ -106,7 +106,7 @@ const openPhotoPopup = () => {
 }
 
 const addCard = (card) => {
-  classList.prepend(card);
+  cardList.prepend(card);
 };
 
 initialCards.forEach((cards) => {
